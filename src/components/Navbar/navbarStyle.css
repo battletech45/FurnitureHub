@@ -1,0 +1,42 @@
+/* Add this to your CSS file */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  color: white;
+  padding: 2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  position: relative;
+}
+
+.navbar__left {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  gap: 3.5rem;
+}
+
+.navbar__left a {
+  color: black;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.navbar__right {
+  display: flex;
+  gap: 2rem;
+  position: absolute;
+  width: max-content;
+  right: 3rem;
+}
+
+.navbar__right svg {
+  margin-left: 15px;
+  font-size: 1.5rem;
+  color: black;
+}

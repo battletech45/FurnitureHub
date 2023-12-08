@@ -1,0 +1,26 @@
+/* ItemCard.css */
+.card-container {
+  width: 300px;
+  border: 1px solid #ccc;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.card-container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.item-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.image-container {
+  width: 300px;
+  height: 202px;
+  background-size: cover;
+  overflow: hidden;
+  margin-bottom: .5rem;
+}
