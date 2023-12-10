@@ -1,93 +1,92 @@
 /* registerForm.css */
 
 .register-container {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    max-width: 350px;
-    margin: auto;
-    padding: 20px;
-  }
-  
-  .register-title {
-    text-align: center;
-    color: #333;
-    margin-bottom: 2rem;
-  }
-  
-  .register-form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .register-label {
-    color: #000;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-  }
-  
-  .register-input {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    width: 100%;
-    border-radius: 0.625rem;
-    border: 1px solid #9F9F9F;
-    background: #FFF;
-    height: 3rem;
-  }
-  
-  .register-button {
-    width: 13rem;
-    padding: 1rem 3.5rem;
-    border-radius: 0.9375rem;
-    border: 1px solid #000;
-    cursor: pointer;
-    color: #000;
-    font-size: 1.1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-  
-  .register-button:hover {
-    background-color: #FAF4F4;
-  }
-
-.register-button-row {
-    margin-top: 1rem;
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  max-width: 350px;
+  margin: auto;
+  padding: 20px;
 }
 
-  .remember-me-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    gap: 1rem;
-  }
-  
-  .remember-me-checkbox {
-    border-radius: 0.3125rem;
-    border: 1px solid #9F9F9F;
-    background: #FFF;
-  }
-  
-  .remember-me-text {
-    color: #000;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
+.register-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+}
 
-  .privacy {
-    color: #000;
-    font-family: Poppins;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-  }
-  
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-label {
+  color: #000;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.register-input {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  border-radius: 0.625rem;
+  border: 1px solid #9F9F9F;
+  background: #FFF;
+  height: 3rem;
+}
+
+.register-button {
+  width: 13rem;
+  padding: 1rem 3.5rem;
+  border-radius: 0.9375rem;
+  border: 1px solid #000;
+  cursor: pointer;
+  color: #000;
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.register-button:hover {
+  background-color: #FAF4F4;
+}
+
+.register-button-row {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.remember-me-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 1rem;
+}
+
+.remember-me-checkbox {
+  border-radius: 0.3125rem;
+  border: 1px solid #9F9F9F;
+  background: #FFF;
+}
+
+.remember-me-text {
+  color: #000;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.privacy {
+  color: #000;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
