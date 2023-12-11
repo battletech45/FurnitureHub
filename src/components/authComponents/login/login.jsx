@@ -1,35 +1,48 @@
-import React, { useState } from 'react';
-import './loginStyle.css';
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../../services/context/authContext";
+import "./loginStyle.css";
 
 const LoginForm = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [rememberMe, setRememberMe] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [remember, setRemember] = useState(false);
+  const navigate = useNavigate();
+  const { authenticate, isAuthenticated } = useAuth();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
+    console.log("I AM HERE");
     e.preventDefault();
-    console.log('Username:', username);
-    console.log('Password:', password);
-    console.log('Remember Me:', rememberMe);
+    await authenticate(email, password);
   };
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate("/");
+    }
+  }, [isAuthenticated]);
 
   return (
     <div className="login-container">
       <h2 className="login-title">Login</h2>
       <form className="login-form" onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="username" className="login-label">Username or email address</label>
+          <label htmlFor="username" className="login-label">
+            Username or email address
+          </label>
           <input
             type="text"
             id="username"
             className="login-input"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
         </div>
         <div>
-          <label htmlFor="password" className="login-label">Password</label>
+          <label htmlFor="password" className="login-label">
+            Password
+          </label>
           <input
             type="password"
             id="password"
@@ -44,13 +57,17 @@ const LoginForm = () => {
             type="checkbox"
             id="rememberMe"
             className="remember-me-checkbox"
-            checked={rememberMe}
-            onChange={() => setRememberMe(!rememberMe)}
+            checked={remember}
+            onChange={() => setRemember(!remember)}
           />
-          <label htmlFor="rememberMe" className="remember-me-text">Remember Me</label>
+          <label htmlFor="rememberMe" className="remember-me-text">
+            Remember Me
+          </label>
         </div>
         <div className="login-button-row">
-          <button type="submit" className="login-button">Login</button>
+          <button type="submit" className="login-button">
+            Login
+          </button>
           <p>Lost Your Password ?</p>
         </div>
       </form>
