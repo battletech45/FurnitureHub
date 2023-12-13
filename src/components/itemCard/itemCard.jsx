@@ -12,8 +12,8 @@ const ItemCard = ({ item }) => {
         <div className="image-container">
           <img className="item-image" src={imageUrl} alt="Item" />
         </div>
-        <p>{title}</p>
-        <h3>{price}</h3>
+        <p className="itemcard-title">{title}</p>
+        <h3 className="itemcard-price">{price}</h3>
       </div>
     </Link>
   );

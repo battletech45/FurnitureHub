@@ -10,9 +10,9 @@ const HeroBanner = ({title}) => {
         <img src={MySvg} alt="Cover" />
         <h1>{ title }</h1>
         <div className="hero-route">
-          <p> Home </p>
+          <p className="pathRoot"> Home </p>
           <img src={arrow} />
-          <p>{ title }</p>
+          <p className="path">{ title }</p>
         </div>
       </div>
     </div>

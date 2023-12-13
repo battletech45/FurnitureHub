@@ -23,6 +23,7 @@ a:hover {
 }
 
 body {
+  font-family: 'Poppins';
   margin: 0;
   display: flex;
   place-items: center;

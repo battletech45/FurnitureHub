@@ -4,7 +4,7 @@ import { login, logout } from "../authService";
 const AuthContext = createContext({
   isAuthenticated: false,
   authenticate: () => {},
-  signout: () => {}
+  signout: () => {},
 });
 
 const AuthProvider = ({ children }) => {

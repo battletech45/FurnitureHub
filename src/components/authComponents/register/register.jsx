@@ -26,8 +26,8 @@ const RegisterForm = () => {
             required
           />
         </div>
-        <p>A link to set a new password will be sent to your email address.</p>
-        <p>
+        <p className="info">A link to set a new password will be sent to your email address.</p>
+        <p className="info">
           Your personal data will be used to support your experience throughout
           this website, to manage access to your account, and for other purposes
           described in our <span className="privacy">privacy policy.</span>

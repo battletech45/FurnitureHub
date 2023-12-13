@@ -11,10 +11,14 @@ const LoginForm = () => {
   const { authenticate, isAuthenticated } = useAuth();
 
   const handleSubmit = async (e) => {
-    console.log("I AM HERE");
+    console.log('HERE');
     e.preventDefault();
-    await authenticate(email, password);
+    if (await authenticate(email, password)) {
+      console.log('CALISTI'); 
+      navigate("/"); 
+    }
   };
+ 
 
   useEffect(() => {
     if (isAuthenticated) {
@@ -68,7 +72,7 @@ const LoginForm = () => {
           <button type="submit" className="login-button">
             Login
           </button>
-          <p>Lost Your Password ?</p>
+          <p className="lost">Lost Your Password ?</p>
         </div>
       </form>
     </div>

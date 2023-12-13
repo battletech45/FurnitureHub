@@ -11,8 +11,12 @@
 
 .login-title {
   text-align: center;
-  color: #333;
   margin-bottom: 2rem;
+  color: #000;
+  font-family: 'Poppins';
+  font-size: 36px;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .login-form {
@@ -22,8 +26,8 @@
 
 .login-label {
   color: #000;
-  font-size: 1rem;
-  font-style: normal;
+  font-family: 'Poppins';
+  font-size: 16px;
   font-weight: 500;
   line-height: normal;
 }
@@ -39,12 +43,13 @@
 }
 
 .login-button {
-  padding: 1rem 4.5rem;
+  padding: 0.5rem 4rem;
   border-radius: 0.9375rem;
   border: 1px solid #000;
   cursor: pointer;
   color: #000;
-  font-size: 1.1rem;
+  font-family: 'Poppins';
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -75,8 +80,18 @@
 
 .remember-me-text {
   color: #000;
-  font-size: 1rem;
+  font-family: 'Poppins';
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
+  line-height: normal;
+}
+
+.lost {
+  color: #000;
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
   line-height: normal;
 }

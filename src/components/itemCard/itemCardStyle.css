@@ -24,3 +24,21 @@
   overflow: hidden;
   margin-bottom: .5rem;
 }
+
+.itemcard-title {
+  color: #000;
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.itemcard-price {
+  color: #000;
+  font-family: 'Poppins';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}

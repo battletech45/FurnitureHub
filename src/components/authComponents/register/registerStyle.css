@@ -11,8 +11,12 @@
 
 .register-title {
   text-align: center;
-  color: #333;
   margin-bottom: 2rem;
+  color: #000;
+  font-family: 'Poppins';
+  font-size: 36px;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .register-form {
@@ -22,8 +26,8 @@
 
 .register-label {
   color: #000;
-  font-size: 1rem;
-  font-style: normal;
+  font-family: 'Poppins';
+  font-size: 16px;
   font-weight: 500;
   line-height: normal;
 }
@@ -40,12 +44,13 @@
 
 .register-button {
   width: 13rem;
-  padding: 1rem 3.5rem;
+  padding: 0.5rem 4rem;
   border-radius: 0.9375rem;
   border: 1px solid #000;
   cursor: pointer;
   color: #000;
-  font-size: 1.1rem;
+  font-family: 'Poppins';
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -61,32 +66,21 @@
   gap: 1rem;
 }
 
-.remember-me-row {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  gap: 1rem;
-}
-
-.remember-me-checkbox {
-  border-radius: 0.3125rem;
-  border: 1px solid #9F9F9F;
-  background: #FFF;
-}
-
-.remember-me-text {
-  color: #000;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
 .privacy {
   color: #000;
-  font-family: Poppins;
+  font-family: 'Poppins';
   font-size: 1rem;
   font-style: normal;
   font-weight: 600;
+  line-height: normal;
+}
+
+.info {
+  color: #000;
+  text-align: justify;
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
   line-height: normal;
 }

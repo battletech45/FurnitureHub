@@ -16,11 +16,11 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="column-center">
-        <p>400 University Drive Suite 200 Coral Gables, FL 33134 USA</p>
+        <p className="address">400 University Drive Suite 200 Coral Gables, FL 33134 USA</p>
       </div>
 
       <div className="column">
-        <h4>Links</h4>
+        <h4 className="footer-title">Links</h4>
         <div className="list">
           <a href="#">Home</a>
           <a href="#">Shop</a>
@@ -30,7 +30,7 @@ const Footer = () => {
       </div>
 
       <div className="column">
-        <h4>Help</h4>
+        <h4 className="footer-title">Help</h4>
         <div className="list">
           <a href="#">Payment Options</a>
           <a href="#">Returns</a>
@@ -39,7 +39,7 @@ const Footer = () => {
       </div>
 
       <div className="column">
-        <h4>Newsletter</h4>
+        <h4 className="footer-title">Newsletter</h4>
         <div className="row">
           <CustomTextField type="text" placeholder="Enter Your Email Address" />
           <button className="button">SUBSCRIBE</button>
