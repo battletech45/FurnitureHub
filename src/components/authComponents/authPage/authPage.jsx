@@ -8,15 +8,12 @@ import "./authPageStyle.css";
 const authPage = () => {
   return (
     <div>
-      <div className="auth-row">
+      <div className="flex items-center justify-evenly">
         <LoginForm />
         <RegisterForm />
       </div>
       <AuthBanner />
       <AuthFooter />
-      <div className="rights-container">
-        <p className="rights">2022 Meubel House. All rights reverved</p>
-      </div>
     </div>
   );
 };
