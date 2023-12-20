@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 
 const ColorSelector = () => {
   const [selectedColor, setSelectedColor] = useState(null);

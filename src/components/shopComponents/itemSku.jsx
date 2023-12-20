@@ -1,4 +1,7 @@
 import React from "react";
+import facebookIcon from '../../../public/assets/facebookIcon.svg';
+import linkedInIcon from '../../../public/assets/linkedinIcon.svg';
+import twitterIcon from '../../../public/assets/twitterIcon.svg';
 
 const ItemSku = () => {
   return (

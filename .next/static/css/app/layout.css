@@ -750,6 +750,12 @@ video {
 .right-12 {
   right: 3rem;
 }
+.right-3 {
+  right: 0.75rem;
+}
+.top-4 {
+  top: 1rem;
+}
 .m-0 {
   margin: 0px;
 }
@@ -782,9 +788,17 @@ video {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+.my-9 {
+  margin-top: 2.25rem;
+  margin-bottom: 2.25rem;
 }
 .mb-1 {
   margin-bottom: 0.25rem;
@@ -889,9 +903,6 @@ video {
   height: -moz-min-content;
   height: min-content;
 }
-.h-16 {
-  height: 4rem;
-}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -916,11 +927,17 @@ video {
 .w-32 {
   width: 8rem;
 }
+.w-40 {
+  width: 10rem;
+}
 .w-52 {
   width: 13rem;
 }
 .w-60 {
   width: 15rem;
+}
+.w-80 {
+  width: 20rem;
 }
 .w-9\/12 {
   width: 75%;
@@ -933,6 +950,9 @@ video {
 }
 .w-\[300px\] {
   width: 300px;
+}
+.w-\[817px\] {
+  width: 817px;
 }
 .w-full {
   width: 100%;
@@ -1191,8 +1211,20 @@ video {
 .pl-20 {
   padding-left: 5rem;
 }
+.pl-24 {
+  padding-left: 6rem;
+}
+.pl-28 {
+  padding-left: 7rem;
+}
 .pl-5 {
   padding-left: 1.25rem;
+}
+.pr-16 {
+  padding-right: 4rem;
+}
+.pr-28 {
+  padding-right: 7rem;
 }
 .text-center {
   text-align: center;
@@ -1235,6 +1267,10 @@ video {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
 .font-bold {
   font-weight: 700;
 }
@@ -1252,6 +1288,9 @@ video {
 }
 .not-italic {
   font-style: normal;
+}
+.leading-6 {
+  line-height: 1.5rem;
 }
 .leading-\[normal\] {
   line-height: normal;
@@ -1272,6 +1311,10 @@ video {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1283,6 +1326,10 @@ video {
   --tw-shadow: 0 4px 8px rgba(0,0,0,0.1);
   --tw-shadow-colored: 0 4px 8px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 .outline {
   outline-style: solid;

@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { items } from "../../App";
-import { Link } from "react-router-dom";
-import arrow from "../../assets/arrowImage.svg";
-import fullStar from "../../assets/fullStar.svg";
-import halfStar from "../../assets/halfStar.svg";
+import { useRouter } from "react-router-dom";
+import Link from "next/link";
+import arrow from "../../../public/assets/arrowImage.svg";
+import fullStar from "../../../public/assets/fullStar.svg";
+import halfStar from "../../../public/assets/halfStar.svg";
 import { IoMdHeartEmpty } from "react-icons/io";
 import ColorSelector from "./colorSelector";
 import SizeChoise from "./sizeChoise";
@@ -12,22 +11,24 @@ import ItemSku from "./itemSku";
 import ItemCart from "./itemCart";
 
 const ItemDetail = () => {
-  const { productId } = useParams();
+
   const [product, setProduct] = useState({});
+  const router = useRouter();
+  const { data } = router.query;
 
   useEffect(() => {
-    const product = items[productId];
+    const product = data;
     setProduct(product);
-  }, [productId]);
+  }, [data]);
 
   return (
     <section>
       <div className="flex items-center gap-2 text-base mb-5 ml-4">
-        <Link to="/" className="link-style">
+        <Link href={"/"}>
           Home
         </Link>
         <img src={arrow} alt="arrow" />
-        <Link className="link-style">Shop</Link>
+        <Link href={'/shop'}>Shop</Link>
         <img src={arrow} alt="arrow" />
         <div className="ml-2 h-8 border border-[#9F9F9F]" />
         <p className="text-black text-base font-normal">{product.title}</p>
