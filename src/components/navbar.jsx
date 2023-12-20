@@ -27,9 +27,9 @@ const Navbar = ({ bgColor }) => {
         </a>
         <a
           className="text-[black] text-base not-italic font-medium leading-[normal] no-underline"
-          href="/about"
+          href="/blog"
         >
-          About
+          Blog
         </a>
         <a
           className="text-[black] text-base not-italic font-medium leading-[normal] no-underline"

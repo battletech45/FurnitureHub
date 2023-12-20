@@ -23,7 +23,7 @@ const ItemList = ({ items, itemsPerPage }) => {
           <button
             key={index + 1}
             onClick={() => paginate(index + 1)}
-            className={currentPage === index + 1 ? 'border cursor-pointer bg-[#007bff] mx-[5px] my-0 px-3 py-2 rounded-[5px] border-solid border-[#ccc]' : 'border cursor-pointer bg-white mx-[5px] my-0 px-3 py-2 rounded-[5px] border-solid border-[#ccc] text-black'}
+            className={currentPage === index + 1 ? 'border cursor-pointer bg-[#FBEBB5] mx-[5px] my-0 px-3 py-2 rounded-[5px] border-solid border-[#ccc] text-black' : 'border cursor-pointer bg-[#FFF9E5] mx-[5px] my-0 px-3 py-2 rounded-[5px] border-solid border-[#ccc] text-black'}
           >
             {index + 1}
           </button>

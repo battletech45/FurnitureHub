@@ -7,7 +7,7 @@ const Footer = () => {
     border: none;
     border-bottom: 1px solid #000;
     outline: none;
-    width: 220px;
+    width: 225px;
     padding: 8px;
     ::placeholder {
       color: #000; /* Adjust placeholder color */

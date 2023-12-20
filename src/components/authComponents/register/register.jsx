@@ -26,7 +26,7 @@ const RegisterForm = () => {
           />
         </div>
         <p className="text-black text-justify text-base font-light">A link to set a new password will be sent to your email address.</p>
-        <p className="text-black text-justify text-base font-light">
+        <p className="text-black text-justify text-base font-light mb-12">
           Your personal data will be used to support your experience throughout
           this website, to manage access to your account, and for other purposes
           described in our <span className="text-black text-base font-semibold">privacy policy.</span>
