@@ -3,9 +3,8 @@ import LoginForm from "../login/login";
 import RegisterForm from "../register/register";
 import AuthBanner from "../authBanner/authBanner";
 import AuthFooter from "../authFooter/authFooter";
-import "./authPageStyle.css";
 
-const authPage = () => {
+const AuthPage = () => {
   return (
     <div>
       <div className="flex items-center justify-evenly">
@@ -18,4 +17,4 @@ const authPage = () => {
   );
 };
 
-export default authPage;
+export default AuthPage;

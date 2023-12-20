@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import {
   IoMdPerson,
   IoMdSearch,
@@ -6,9 +7,11 @@ import {
   IoMdCart,
 } from "react-icons/io";
 
-const Navbar = ({bgColor}) => {
+const Navbar = ({ bgColor }) => {
   return (
-    <nav className={`flex items-center ${bgColor} text-white relative px-12 p-8 w-ful`}>
+    <nav
+      className={`flex items-center ${bgColor} text-white relative px-12 p-8 w-full`}
+    >
       <div className="w-full justify-center flex gap-14">
         <a
           className="text-[black] text-base not-italic font-medium leading-[normal] no-underline"
@@ -37,7 +40,9 @@ const Navbar = ({bgColor}) => {
       </div>
 
       <div className="flex gap-8 absolute w-max right-12">
-        <IoMdPerson className="text-2xl text-[black] ml-[15px]" />
+        <Link href={"/profile"}>
+          <IoMdPerson className="text-2xl text-[black] ml-[15px]" />
+        </Link>
         <IoMdSearch className="text-2xl text-[black] ml-[15px]" />
         <IoMdHeartEmpty className="text-2xl text-[black] ml-[15px]" />
         <IoMdCart className="text-2xl text-[black] ml-[15px]" />

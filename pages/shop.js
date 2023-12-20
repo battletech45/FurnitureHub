@@ -234,7 +234,7 @@ const Shop = () => {
 
   return (
     <main className="flex bg-white min-h-screen flex-col items-center justify-between">
-      <Navbar />
+      <Navbar bgColor={'white'}/>
       <HeroBanner title={'Shop'}/>
       <ItemList items={items} itemsPerPage={12}/>       
     </main>

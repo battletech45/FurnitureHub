@@ -15,7 +15,7 @@ const HomeBanner = () => {
           <p className="text-black text-2xl font-medium">Shop Now</p>
           <div className="bg-black w-32 h-0.5"></div>
         </div>
-        <Image src={Sofa} width={853} height={700} alt="homeBannerSofa" />
+        <Image src={Sofa} width={853} height={300} alt="homeBannerSofa" />
       </div>
     </div>
   );

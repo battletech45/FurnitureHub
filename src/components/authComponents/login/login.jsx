@@ -1,13 +1,10 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../../services/context/authContext";
-import "./loginStyle.css";
+import { useAuth } from "../../../services/authContext";
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [remember, setRemember] = useState(false);
-  const navigate = useNavigate();
   const { authenticate, isAuthenticated } = useAuth();
 
   const handleSubmit = async (e) => {

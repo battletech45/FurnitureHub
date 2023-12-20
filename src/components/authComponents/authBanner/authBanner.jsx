@@ -1,5 +1,4 @@
 import React from "react";
-import "./authBannerStyle.css";
 
 const Banner = () => {
   return (

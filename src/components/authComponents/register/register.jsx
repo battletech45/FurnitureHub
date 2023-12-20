@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./registerStyle.css";
 
 const RegisterForm = () => {
   const [email, setEmail] = useState("");
