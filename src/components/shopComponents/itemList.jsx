@@ -16,7 +16,7 @@ const ItemList = ({ items, itemsPerPage }) => {
     <div>
       <div className="grid gap-x-8 gap-y-8 grid-cols-4 place-items-center">
         {currentItems.map((item) => (
-          <Link href={`/${item.id}`} as={item}>
+          <Link href={`/${item}`}>
             <ItemCard key={item.id} item={item} />
           </Link>
         ))}
