@@ -1,18 +1,7 @@
 "use client";
 import React from "react";
-import styled from "styled-components";
 
 const Footer = () => {
-  const CustomTextField = styled.input`
-    border: none;
-    border-bottom: 1px solid #000;
-    outline: none;
-    width: 225px;
-    padding: 8px;
-    ::placeholder {
-      color: #000; /* Adjust placeholder color */
-    }
-  `;
 
   return (
     <footer className=" pl-20 flex justify-center items-start mt-4 w-full">
@@ -60,7 +49,11 @@ const Footer = () => {
           Newsletter
         </h4>
         <div className="flex items-end gap-4">
-          <CustomTextField type="text" placeholder="Enter Your Email Address" />
+          <input
+            className=" border-b border-black outline-none w-56 p-2 placeholder-black"
+            type="text"
+            placeholder="Enter Your Email Address"
+          />
           <button className="p-0 pb-3 outline-0 rounded-none border-b border-b-black text-black text-sm font-medium">
             SUBSCRIBE
           </button>

@@ -17,6 +17,14 @@ const AuthPage = () => {
       </div>
       <AuthBanner />
       <AuthFooter />
+      <div className="flex flex-col items-center">
+        <div className="bg-[#D9D9D9] w-9/12 h-0.5 items-center justify-center flex my-12"></div>
+        <div className="justify-start items-start flex w-9/12">
+          <p className="text-black text-base font-normal mb-8">
+            2022 Meubel House. All rights reverved
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
