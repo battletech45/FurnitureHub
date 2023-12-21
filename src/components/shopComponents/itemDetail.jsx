@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useRouter } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Link from "next/link";
 import arrow from "../../../public/assets/arrowImage.svg";
 import fullStar from "../../../public/assets/fullStar.svg";
@@ -10,9 +10,15 @@ import SizeChoise from "./sizeChoise";
 import ItemSku from "./itemSku";
 import ItemCart from "./itemCart";
 
-const ItemDetail = ({product}) => {
+const ItemDetail = () => {
 
-  const { id, imageUrl, title, price } = product;
+  const { productId } = useParams();
+  const [product, setProduct] = useState({});
+
+  useEffect(() => {
+    const product = data[productId];
+    setProduct(product);
+  }, [productId]);
 
   return (
     <section>
@@ -22,7 +28,7 @@ const ItemDetail = ({product}) => {
         <Link href={"/shop"}>Shop</Link>
         <img src={arrow} alt="arrow" />
         <div className="ml-2 h-8 border border-[#9F9F9F]" />
-        <p className="text-black text-base font-normal">{title}</p>
+        <p className="text-black text-base font-normal">{product.title}</p>
       </div>
       <section className="flex p-5">
         <div className="flex flex-col gap-8 mr-8">
@@ -32,14 +38,12 @@ const ItemDetail = ({product}) => {
           <img src={product.imageUrl} alt="smallPhotos" />
         </div>
         <aside className=" flex-1">
-          <img className="w-full h-[600px]" src={imageUrl} alt="Item" />
+          <img className="w-full h-[600px]" src={product.imageUrl} alt="Item" />
         </aside>
         <aside className="flex-1 pl-5 h-min box-border">
-          <h2 className="text-black text-4xl font-normal">{title}</h2>
+          <h2 className="text-black text-4xl font-normal">{product.title}</h2>
           <span className=" h-min flex items-center gap-52">
-            <h4 className="text-[#9F9F9F] text-2xl font-medium">
-              {price}
-            </h4>
+            <h4 className="text-[#9F9F9F] text-2xl font-medium">{product.price}</h4>
             <IoMdHeartEmpty color="red" size={25} />
           </span>
           <span className="items-center flex">
