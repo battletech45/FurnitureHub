@@ -45,7 +45,9 @@ const Navbar = ({ bgColor }) => {
         </Link>
         <IoMdSearch className="text-2xl text-[black] ml-[15px]" />
         <IoMdHeartEmpty className="text-2xl text-[black] ml-[15px]" />
-        <IoMdCart className="text-2xl text-[black] ml-[15px]" />
+        <Link href={"/cart"}>
+          <IoMdCart className="text-2xl text-[black] ml-[15px]" />
+        </Link>
       </div>
     </nav>
   );
