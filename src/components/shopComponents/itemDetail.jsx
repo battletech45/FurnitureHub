@@ -15,10 +15,12 @@ const ItemDetail = () => {
   const { productId } = useParams();
   const [product, setProduct] = useState({});
 
+  /*
   useEffect(() => {
     const product = data[productId];
     setProduct(product);
   }, [productId]);
+  */
 
   return (
     <section>

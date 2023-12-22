@@ -6,6 +6,7 @@ import CartItem from "./cartItem";
 import Image from "next/image";
 import Banner from "../authComponents/authBanner/authBanner";
 import Footer from "../authComponents/authFooter/authFooter";
+import Link from "next/link";
 
 const CartPage = () => {
   return (
@@ -41,12 +42,14 @@ const CartPage = () => {
             <h4 className="text-black text-base font-medium">Total</h4>
             <p className="text-[#B88E2F] text-xl font-medium">Rs. 250,000.00</p>
           </div>
-          <button
-            type="submit"
-            className="py-2 px-12 rounded-2xl border border-black cursor-pointer text-black text-xl font-normal w-52 mb-20 h-14"
-          >
-            Check out
-          </button>
+          <Link href={'/checkout'}>
+            <button
+              type="submit"
+              className="py-2 px-12 rounded-2xl border border-black cursor-pointer text-black text-xl font-normal w-52 mb-20 h-14"
+            >
+              Check out
+            </button>
+          </Link>
         </div>
       </div>
       <Banner />
