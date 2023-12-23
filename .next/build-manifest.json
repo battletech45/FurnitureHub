@@ -15,6 +15,11 @@
     "static/chunks/main-app.js"
   ],
   "pages": {
+    "/[itemID]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/[itemID].js"
+    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -24,11 +29,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
-    ],
-    "/itemDetail": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/itemDetail.js"
     ],
     "/shop": [
       "static/chunks/webpack.js",

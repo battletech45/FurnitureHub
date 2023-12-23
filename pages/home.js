@@ -12,7 +12,7 @@ const HomePage = () => {
     <div className="w-full flex flex-col items-center">
       <HomeBanner />
       <HomeExamples />
-      <TopPicks />
+      <TopPicks title={'Top Picks For You'} desc={'Find a bright ideal to suit your taste with our great selection of suspension, floor and table lights.'}/>
       <NewArrival />
       <OurBlogs />
       <OurInstagram />

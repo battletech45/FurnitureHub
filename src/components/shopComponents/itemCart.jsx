@@ -15,12 +15,12 @@ const ItemCart = () => {
   };
   return (
     <div className=" mt-8 flex gap-8">
-      <div className="flex gap-8 py-1 px-3 w-min rounded-sm cursor-pointer border border-[#9F9F9F]">
-        <p onClick={handleDecrement}> - </p>
-        <p>{count}</p>
-        <p onClick={handleIncrement}> + </p>
+      <div className="flex gap-8 py-1 px-3 w-min rounded-lg cursor-pointer border border-[#9F9F9F] items-center">
+        <p onClick={handleDecrement} className="text-black"> - </p>
+        <p className="text-black">{count}</p>
+        <p onClick={handleIncrement} className="text-black"> + </p>
       </div>
-      <button className="bg-white text-black py-4 px-10 rounded-sm border border-black cursor-pointer text-xl font-normal">Add to Cart</button>
+      <button className="bg-white text-black py-4 px-10 rounded-xl border border-black cursor-pointer text-xl font-normal">Add to Cart</button>
     </div>
   );
 };

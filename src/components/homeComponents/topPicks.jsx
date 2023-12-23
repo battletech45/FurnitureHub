@@ -1,7 +1,7 @@
 import React from "react";
 import ItemCard from "../shopComponents/itemCard";
 
-const TopPicks = () => {
+const TopPicks = ({title, desc}) => {
   const data = [
     {
       id: 0,
@@ -35,11 +35,10 @@ const TopPicks = () => {
   return (
     <div className="flex flex-col justify-center items-center w-full">
       <h2 className="text-black text-4xl font-normal mb-4 mt-16">
-        Top Picks For You
+        {title}
       </h2>
       <p className="text-[#9F9F9F] text-base font-medium mb-16">
-        Find a bright ideal to suit your taste with our great selection of
-        suspension, floor and table lights.
+        {desc}
       </p>
       <div className="flex gap-8">
         <ItemCard item={data[0]} />

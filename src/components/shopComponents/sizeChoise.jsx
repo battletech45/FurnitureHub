@@ -12,8 +12,8 @@ const SizeChoise = () => {
       <p
         className={
           selectedSize === "XS"
-            ? "bg-[#FBEBB5] py-3 px-4 rounded-md m-0 cursor-pointer mb-2"
-            : "bg-[#F4F4F4] py-3 px-4 rounded-md m-0 cursor-pointer mb-2"
+            ? "bg-[#FBEBB5] py-3 px-4 rounded-md m-0 cursor-pointer mb-2 text-black"
+            : "bg-[#F4F4F4] py-3 px-4 rounded-md m-0 cursor-pointer mb-2 text-black"
         }
         onClick={() => handleSizeClick("XS")}
       >
@@ -22,8 +22,8 @@ const SizeChoise = () => {
       <p
         className={
           selectedSize === "L"
-            ? "bg-[#FBEBB5] py-3 px-4 rounded-md m-0 cursor-pointer mb-2"
-            : "bg-[#F4F4F4] py-3 px-4 rounded-md m-0 cursor-pointer mb-2"
+            ? "bg-[#FBEBB5] py-3 px-4 rounded-md m-0 cursor-pointer mb-2 text-black"
+            : "bg-[#F4F4F4] py-3 px-4 rounded-md m-0 cursor-pointer mb-2 text-black"
         }
         onClick={() => handleSizeClick("L")}
       >
@@ -32,8 +32,8 @@ const SizeChoise = () => {
       <p
         className={
           selectedSize === "XL"
-            ? "bg-[#FBEBB5] py-3 px-4 rounded-md m-0 cursor-pointer mb-2"
-            : "bg-[#F4F4F4] py-3 px-4 rounded-md m-0 cursor-pointer mb-2"
+            ? "bg-[#FBEBB5] py-3 px-4 rounded-md m-0 cursor-pointer mb-2 text-black"
+            : "bg-[#F4F4F4] py-3 px-4 rounded-md m-0 cursor-pointer mb-2 text-black"
         }
         onClick={() => handleSizeClick("XL")}
       >
