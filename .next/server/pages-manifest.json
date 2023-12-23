@@ -2,6 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/[itemID]": "pages/[itemID].js",
+  "/cart": "pages/cart.js",
   "/shop": "pages/shop.js",
-  "/[itemID]": "pages/[itemID].js"
+  "/checkout": "pages/checkout.js"
 }

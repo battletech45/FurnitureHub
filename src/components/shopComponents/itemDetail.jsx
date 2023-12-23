@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 import Image from "next/image";
 import arrow from "../../../public/assets/arrowImage.svg";
 import fullStar from "../../../public/assets/fullStar.svg";
@@ -14,9 +14,11 @@ import ItemCart from "./itemCart";
 import Navbar from "../navbar";
 import Footer from "../authComponents/authFooter/authFooter";
 import TopPicks from "../homeComponents/topPicks";
+import CartPopup from "./cartPopup";
 
 const ItemDetail = ({ itemID }) => {
   const [product, setProduct] = useState({});
+  const [isShown, setIsShown] = useState(false);
   const router = useRouter();
 
   const items = [
@@ -246,6 +248,12 @@ const ItemDetail = ({ itemID }) => {
     },
   ];
 
+  function toggleShown() {
+    const body = document.querySelector('body');
+    body.classList.toggle('overflow-hidden');
+    setIsShown(!isShown);
+  }
+
   useEffect(() => {
     console.log(router.query);
     const product = items[itemID];
@@ -254,7 +262,7 @@ const ItemDetail = ({ itemID }) => {
 
   return (
     <div className="bg-white flex flex-col justify-center">
-      <Navbar bgColor={"white"} />
+      <Navbar />
       <div className="flex items-center gap-2 text-base mb-5 pl-32 bg-white">
         <Link href={"/"} className="text-black">
           Home
@@ -335,14 +343,14 @@ const ItemDetail = ({ itemID }) => {
           <SizeChoise />
           <h5 className="text-[#9F9F9F] text-base font-normal my-4">Color</h5>
           <ColorSelector />
-          <ItemCart />
+          <ItemCart handleFunction={toggleShown} />
           <div className=" w-11/12 mt-16 border my-4" />
           <ItemSku />
         </aside>
       </section>
       <div className="w-full border border-[#FFFFFF] my-4"></div>
       <ItemDescription />
-      <TopPicks title={'Related Products'}/>
+      <TopPicks title={"Related Products"} />
       <Footer />
       <div className="flex flex-col items-center">
         <div className="bg-[#D9D9D9] w-9/12 h-0.5 items-center justify-center flex my-12"></div>
@@ -352,6 +360,15 @@ const ItemDetail = ({ itemID }) => {
           </p>
         </div>
       </div>
+      {isShown && (
+        <CartPopup
+          photo={product.imageUrl}
+          title={product.title}
+          price={product.price}
+          quantity={"1"}
+          closeFunction={toggleShown}
+        />
+      )}
     </div>
   );
 };

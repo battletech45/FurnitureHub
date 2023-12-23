@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-const ItemCart = () => {
+const ItemCart = ({handleFunction}) => {
   const [count, setCount] = useState(1);
 
   const handleIncrement = () => {
@@ -20,7 +20,7 @@ const ItemCart = () => {
         <p className="text-black">{count}</p>
         <p onClick={handleIncrement} className="text-black"> + </p>
       </div>
-      <button className="bg-white text-black py-4 px-10 rounded-xl border border-black cursor-pointer text-xl font-normal">Add to Cart</button>
+      <button className="bg-white text-black py-4 px-10 rounded-xl border border-black cursor-pointer text-xl font-normal" onClick={() => handleFunction()}>Add to Cart</button>
     </div>
   );
 };

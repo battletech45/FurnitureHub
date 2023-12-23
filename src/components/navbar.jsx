@@ -10,7 +10,7 @@ import {
 const Navbar = ({ bgColor }) => {
   return (
     <nav
-      className={`flex items-center absolute bg-${bgColor} text-white relative px-12 p-8 w-full z-50`}
+      className={`flex items-center absolute bg-${bgColor} text-white relative px-12 p-8 w-full z-30`}
     >
       <div className="w-full justify-center flex gap-14">
         <a
