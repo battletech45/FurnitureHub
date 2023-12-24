@@ -10,7 +10,6 @@ export default {
     layout: 'fullscreen',
   },
 };
-
 export const LoggedIn = {
   args: {
     user: {
@@ -19,4 +18,6 @@ export const LoggedIn = {
   },
 };
 
-export const LoggedOut = {};
+export const LoggedOut = {
+  args: {},
+};

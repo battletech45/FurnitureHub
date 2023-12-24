@@ -3,7 +3,5 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/[itemID]": "pages/[itemID].js",
-  "/cart": "pages/cart.js",
-  "/shop": "pages/shop.js",
-  "/checkout": "pages/checkout.js"
+  "/shop": "pages/shop.js"
 }

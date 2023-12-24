@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import ItemCard from "./itemCard";
 import Link from "next/link";
+import Filter from "./filter";
 
 const ItemList = ({ items, itemsPerPage }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -13,7 +14,8 @@ const ItemList = ({ items, itemsPerPage }) => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <div>
+    <div className="w-full">
+      <Filter currentPage={currentPage}/>
       <div className="grid gap-x-8 gap-y-8 grid-cols-4 place-items-center">
         {currentItems.map((item) => (
           <Link href={`/${item.id}`}>

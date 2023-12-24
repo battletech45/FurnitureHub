@@ -5,7 +5,7 @@ import Navbar from "../navbar";
 
 const HomeBanner = () => {
   return (
-    <div className="bg-[#FBEBB5] w-full h-screen justify-around items-center">
+    <div className="bg-[#FBEBB5] w-full justify-around items-center">
       <Navbar bgColor={"#FBEBB5"} />
       <div className="w-full flex items-center justify-between px-8">
         <div>
