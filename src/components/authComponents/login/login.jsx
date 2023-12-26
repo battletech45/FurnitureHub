@@ -47,7 +47,7 @@ const LoginForm = () => {
           <input
             type="password"
             id="password"
-            className="mt-8 mb-8 w-full rounded-xl border border-[#9F9F9F] bg-[#FFF] h-12"
+            className=" text-black mt-8 mb-8 w-full rounded-xl border border-[#9F9F9F] bg-[#FFF] h-12"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
