@@ -10,7 +10,7 @@ const ItemCard = ({ item }) => {
         <img className="w-full object-cover" src={imageUrl} alt="Item" />
       </div>
       <p className="text-black text-base font-normal">{title}</p>
-      <h3 className="text-black text-2xl font-medium">{price}</h3>
+      <h3 className="text-black text-2xl font-medium">Rs. {price}.00</h3>
     </div>
   );
 };

@@ -1,30 +1,24 @@
 import React from "react";
 import { useState } from "react";
-import cartItems from '../../data/cartItems';
+import { useCart } from "@/data/useCartStore";
 
-const ItemCart = ({handleFunction, handleQuantity, product}) => {
+const ItemCart = ({handleFunction, product}) => {
   const [count, setCount] = useState(1);
+  const { addToCart, cart } = useCart();
 
   const handleIncrement = () => {
     setCount(count + 1);
-    handleQuantity(count + 1);
   };
 
   const handleDecrement = () => {
     if (count > 1) {
       setCount(count - 1);
-      handleQuantity(count - 1);
     }
   };
 
   const handleAddCart = () => {
-    var previousQuantity = 0;
-    if(cartItems.has(product.id)) {
-      previousQuantity = cartItems.get(product.id); 
-      console.log(previousQuantity);
-    } 
-    cartItems.set(product.id, count + previousQuantity);
-    console.log(cartItems);
+    addToCart(product, count);
+    console.log(cart);
   }
 
   return (

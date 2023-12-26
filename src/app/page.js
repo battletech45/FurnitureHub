@@ -1,6 +1,5 @@
-import './globals.css';
-import HomePage from '../../pages/home';
-import HeroBanner from '@/components/banner';
+import "./globals.css";
+import HomePage from "../../pages/home";
 
 export default function Home() {
 
@@ -8,5 +7,5 @@ export default function Home() {
     <main className="flex bg-white min-h-screen flex-col items-center justify-between">
       <HomePage />
     </main>
-  )
+  );
 }

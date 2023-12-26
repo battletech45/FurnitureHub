@@ -3,13 +3,15 @@ import React, { useState } from "react";
 import ItemCard from "./itemCard";
 import Link from "next/link";
 import Filter from "./filter";
+import { useProducts } from "@/data/useProductStore";
 
-const ItemList = ({ items, itemsPerPage }) => {
+const ItemList = ({ itemsPerPage }) => {
+  const {products} = useProducts();
   const [currentPage, setCurrentPage] = useState(1);
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = items.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItems = products.slice(indexOfFirstItem, indexOfLastItem);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
@@ -25,7 +27,7 @@ const ItemList = ({ items, itemsPerPage }) => {
       </div>
       <div className="flex gap-4 justify-center mt-12 mb-6">
         {Array.from(
-          { length: Math.ceil(items.length / itemsPerPage) },
+          { length: Math.ceil(products.length / itemsPerPage) },
           (_, index) => (
             <button
               key={index + 1}

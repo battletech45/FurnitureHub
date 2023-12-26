@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Close from "../../../public/assets/closeCart.svg";
-import { XCircle } from "lucide-react";
 import Link from "next/link";
+import { useCart } from "@/data/useCartStore";
+import CartItem from "./cartItem";
 
-const CartPopup = ({ photo, title, price, quantity, closeFunction }) => {
+const CartPopup = ({closeFunction }) => {
+  const { cart } = useCart();
 
   function toggleBodyScroll() {
+    /*
     const body = document.querySelector("body");
     body.classList.toggle("overflow-hidden");
+    */
   }
 
   return (
@@ -27,39 +31,40 @@ const CartPopup = ({ photo, title, price, quantity, closeFunction }) => {
             />
           </div>
           <div className="bg-[#D9D9D9] w-[19rem] h-0.5 items-center justify-center flex my-12"></div>
-          <div className="flex items-center justify-between">
-            <img
-              src={photo}
-              alt="smallPhotos"
-              width={100}
-              height={100}
-              className=" rounded-xl"
-            />
-            <div>
-              <p className="text-black text-base font-normal">{title}</p>
-              <div className="flex items-center gap-4 items-center justify-start">
-                <p className="text-black text-base font-light">{quantity}</p>
-                <p className="text-black text-base font-light">X</p>
-                <p className="text-[#B88E2F] text-xs font-medium">{price}</p>
-              </div>
-            </div>
-            <XCircle color="black" />
-          </div>
+          {/*CART ITEMS */}
+          {cart.map((item) => (
+            <CartItem key={item.id} product={item} />
+          ))}
         </div>
         <div>
+          11
           <div className="flex item-center justify-between">
             <p className="text-black text-base font-normal">Subtotal</p>
-            <p className="text-[#B88E2F] text-base font-semibold">{price}</p>
+            <p className="text-[#B88E2F] text-base font-semibold">
+              {cart.length === 0 ? null : (
+                <p>
+                  {cart
+                    .reduce((acc, item) => acc + item.amount * item.price, 0)
+                    .toFixed(2)}
+                </p>
+              )}
+            </p>
           </div>
           <div className="bg-[#D9D9D9] w-full h-0.5 items-center justify-center flex my-8"></div>
           <div className="flex items-center justify-around gap-4">
             <Link href={"/cart"}>
-              <button className="bg-white text-black py-2 px-10 rounded-3xl border border-black cursor-pointer text-xl font-normal" onClick={toggleBodyScroll}>
+              <button
+                className="bg-white text-black py-2 px-10 rounded-3xl border border-black cursor-pointer text-xl font-normal"
+                onClick={toggleBodyScroll}
+              >
                 View Cart
               </button>
             </Link>
             <Link href={"/checkout"}>
-              <button className="bg-white text-black py-2 px-10 rounded-3xl border border-black cursor-pointer text-xl font-normal" onClick={toggleBodyScroll}>
+              <button
+                className="bg-white text-black py-2 px-10 rounded-3xl border border-black cursor-pointer text-xl font-normal"
+                onClick={toggleBodyScroll}
+              >
                 Checkout
               </button>
             </Link>

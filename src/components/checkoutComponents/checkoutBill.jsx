@@ -1,27 +1,46 @@
 import React from "react";
 
+import { useCart } from "@/data/useCartStore";
+import CheckoutItem from "./checkoutItem";
+
 const CheckoutBill = () => {
+  const { cart } = useCart();
+
   return (
     <div className="flex flex-col gap-6 mt-24">
       <div className="flex justify-between gap-80 items-center">
         <h3 className="text-black text-2xl font-medium">Product</h3>
         <h3 className="text-black text-2xl font-medium">Subtotal</h3>
       </div>
-      <div className="flex justify-between gap-80 items-center">
-        <div className="flex gap-4 items-center">
-          <h3 className="text-[#9F9F9F] text-base font-normal">Asgaard sofa</h3>
-          <p className="text-black text-xs font-medium">X</p>
-          <p className="text-black text-xs font-medium">1</p>
-        </div>
-        <h3 className="text-black text-base font-light">Rs. 250,000.00</h3>
-      </div>
+      {cart.map((item) => (
+            <CheckoutItem item={item}/>
+          ))}
       <div className="flex justify-between gap-80 items-center">
         <h3 className="text-black text-base font-normal">Subtotal</h3>
-        <h3 className="text-black text-base font-light">Rs. 250,000.00</h3>
+        <h3 className="text-black text-base font-light">
+          {cart.length === 0 ? null : (
+            <p>
+              Rs.
+              {cart
+                .reduce((acc, item) => acc + item.amount * item.price, 0)
+                .toFixed(2)}
+            </p>
+          )}
+        </h3>
       </div>
       <div className="flex justify-between gap-80 items-center">
         <h3 className="text-black text-base font-normal">Total</h3>
-        <h3 className="text-[#B88E2F] text-2xl font-bold">Rs. 250,000.00</h3>
+        <h3 className="text-[#B88E2F] text-2xl font-bold">
+          {" "}
+          {cart.length === 0 ? null : (
+            <p>
+              Rs. 
+              {cart
+                .reduce((acc, item) => acc + item.amount * item.price, 0)
+                .toFixed(2)}
+            </p>
+          )}
+        </h3>
       </div>
       <div className="bg-[#D9D9D9] w-full h-0.5 items-center justify-center flex my-12"></div>
       <div className="flex gap-4 items-center">

@@ -14,16 +14,16 @@ const Footer = () => {
       <div className="flex flex-col items-start py-4 px-16">
         <h4 className="text-[#9F9F9F] text-base font-medium mb-12">Links</h4>
         <div className="flex flex-col items-start gap-12">
-          <a href="#" className="text-black text-base font-medium">
+          <a href="/" className="text-black text-base font-medium">
             Home
           </a>
-          <a href="#" className="text-black text-base font-medium">
+          <a href="/shop" className="text-black text-base font-medium">
             Shop
           </a>
-          <a href="#" className="text-black text-base font-medium">
-            About
+          <a href="/blog" className="text-black text-base font-medium">
+            Blog
           </a>
-          <a href="#" className="text-black text-base font-medium">
+          <a href="/contact" className="text-black text-base font-medium">
             Contact
           </a>
         </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { useProducts } from "@/data/useProductStore";
 import Image from "next/image";
 import arrow from "../../../public/assets/arrowImage.svg";
 import fullStar from "../../../public/assets/fullStar.svg";
@@ -14,24 +14,23 @@ import ItemCart from "./itemCart";
 import Navbar from "../navbar";
 import Footer from "../authComponents/authFooter/authFooter";
 import TopPicks from "../homeComponents/topPicks";
-import items from '../../data/data';
 import CartPopup from "./cartPopup";
 
 const ItemDetail = ({ itemID }) => {
+  const {products} = useProducts();
   const [product, setProduct] = useState({});
-  const [quantity, setQuantity] = useState(1);
   const [isShown, setIsShown] = useState(false);
-  const router = useRouter();
 
-  function toggleShown() {
+  function toggleShown() {/*
     const body = document.querySelector('body');
     body.classList.toggle('overflow-hidden');
+    */
     setIsShown(!isShown);
-  }
+}
 
   useEffect(() => {
-    console.log(router.query);
-    const product = items[itemID];
+    const product = products[itemID];
+    console.log(product);
     setProduct(product);
   }, [itemID]);
 
@@ -94,7 +93,7 @@ const ItemDetail = ({ itemID }) => {
           </h2>
           <span className=" h-min flex items-center gap-52 mb-4">
             <h4 className="text-[#9F9F9F] text-2xl font-medium">
-              {product.price}
+              Rs. {product.price}.00
             </h4>
             <Heart color="red" size={25} />
           </span>
@@ -118,7 +117,7 @@ const ItemDetail = ({ itemID }) => {
           <SizeChoise />
           <h5 className="text-[#9F9F9F] text-base font-normal my-4">Color</h5>
           <ColorSelector />
-          <ItemCart handleFunction={toggleShown} handleQuantity={setQuantity} product={product}/>
+          <ItemCart handleFunction={toggleShown} product={product}/>
           <div className=" w-11/12 mt-16 border my-4" />
           <ItemSku />
         </aside>
@@ -137,10 +136,7 @@ const ItemDetail = ({ itemID }) => {
       </div>
       {isShown && (
         <CartPopup
-          photo={product.imageUrl}
-          title={product.title}
-          price={product.price}
-          quantity={quantity}
+          product={product}
           closeFunction={toggleShown}
         />
       )}

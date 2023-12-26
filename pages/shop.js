@@ -5,7 +5,6 @@ import ItemList from '@/components/shopComponents/itemList';
 import Navbar from '@/components/navbar';
 import Banner from '@/components/authComponents/authBanner/authBanner';
 import Footer from '@/components/authComponents/authFooter/authFooter';
-import items from '../src/data/data';
 
 const Shop = () => {
 
@@ -13,7 +12,7 @@ const Shop = () => {
     <main className="flex bg-white min-h-screen flex-col items-center justify-between">
       <Navbar bgColor={'white'}/>
       <HeroBanner title={'Shop'}/>
-      <ItemList items={items} itemsPerPage={12}/>     
+      <ItemList itemsPerPage={12}/>     
       <Banner />
       <Footer />  
       <div className="bg-[#D9D9D9] w-9/12 h-0.5 items-center justify-center flex my-12"></div>

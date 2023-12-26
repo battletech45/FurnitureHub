@@ -6,8 +6,12 @@ import CheckoutPicker from "./checkoutPicker";
 import CheckoutBill from "./checkoutBill";
 import Banner from "../authComponents/authBanner/authBanner";
 import Footer from "../authComponents/authFooter/authFooter";
+import { useCart } from "@/data/useCartStore";
 
 const CheckoutPage = () => {
+
+  const { cart } = useCart();
+
   return (
     <div className="bg-white flex flex-col">
       <Navbar bgColor={"white"} />
