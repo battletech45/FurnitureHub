@@ -1,27 +1,22 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../../../services/authContext";
+import { useRouter } from "next/router";
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [remember, setRemember] = useState(false);
   const { authenticate, isAuthenticated } = useAuth();
+  const router = useRouter();
 
   const handleSubmit = async (e) => {
     console.log('HERE');
     e.preventDefault();
     if (await authenticate(email, password)) {
-      console.log('CALISTI'); 
-      navigate("/"); 
+      console.log('CALISTI');
+      router.push('/shop'); 
     }
   };
- 
-
-  useEffect(() => {
-    if (isAuthenticated) {
-      navigate("/");
-    }
-  }, [isAuthenticated]);
 
   return (
     <div className="flex flex-col items-start max-w-[350px] m-auto p-5">
