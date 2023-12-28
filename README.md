@@ -20,12 +20,6 @@ FurnitureHub is an online platform that offers a wide range of high-quality furn
 
 - **User-friendly Interface**: Enjoy a seamless shopping experience with an intuitive and responsive design.
 
-- **Secure Checkout Process**: Shop with confidence using our secure and reliable checkout process.
-
-- **User Accounts**: Create and manage your account for personalized recommendations and order history.
-
-- **Search and Filter Options**: Easily find the furniture you're looking for with powerful search and filter functionalities.
-
 - **Responsive Design**: Access the website from any device, ensuring a consistent and enjoyable user experience.
 
 ## Demo
@@ -38,10 +32,10 @@ Check out our live demo [here](link_to_demo) to experience FurnitureHub in actio
 
 To run FurnitureHub locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/furniturehub.git`
+1. Clone the repository: `git clone https://github.com/battletech45/furniturehub.git`
 2. Navigate to the project directory: `cd furniturehub`
 3. Install dependencies: `npm install`
-4. Start the development server: `npm start`
+4. Start the development server: `npm run dev`
 5. Open your browser and visit `http://localhost:3000`
 
 ## Usage
@@ -54,12 +48,9 @@ To run FurnitureHub locally, follow these steps:
 ## Technologies Used
 
 - React
-- Node.js
-- Express
-- MongoDB
-- Redux
-- Bootstrap
-- and more...
+- Tailwind CSS
+- Zustand state management
+- Next.js
 
 ## Contributing
 
