@@ -6,7 +6,7 @@ const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [remember, setRemember] = useState(false);
-  const { authenticate, isAuthenticated } = useAuth();
+  const { authenticate } = useAuth();
   const router = useRouter();
 
   const handleSubmit = async (e) => {

@@ -1,7 +1,1 @@
-{
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/shop": "pages/shop.js",
-  "/profile": "pages/profile.js"
-}
+{"/_app":"pages/_app.js","/_error":"pages/_error.js","/[itemID]":"pages/[itemID].html","/blog":"pages/blog.html","/cart":"pages/cart.html","/checkout":"pages/checkout.html","/contact":"pages/contact.html","/home":"pages/home.html","/profile":"pages/profile.html","/shop":"pages/shop.html","/_document":"pages/_document.js","/404":"pages/404.html"}

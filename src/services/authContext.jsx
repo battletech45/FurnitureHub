@@ -10,7 +10,7 @@ const AuthContext = createContext({
 
 const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(
-    localStorage.getItem("accessToken") ? true : false
+    typeof window !== "undefined" && localStorage.getItem("accessToken") ? true : false
   );
 
   const authenticate = async ({ email, password }) => {
