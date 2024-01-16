@@ -40,10 +40,10 @@ const ContactPage = () => {
             />
           </div>
           <div className="gap-12 flex flex-col">
-            <ContactField title={"Your name"} />
-            <ContactField title={"Email address"} />
-            <ContactField title={"Subject"} />
-            <ContactField title={"Message"} />
+            <ContactField title={"Your name"} placeholder={'Abc'} />
+            <ContactField title={"Email address"} placeholder={'Abc@def.com'} />
+            <ContactField title={"Subject"} placeholder={'This is an optional'} />
+            <ContactField title={"Message"} placeholder={"Hi I'd like to ask about"}/>
             <button
               type="submit"
               className="py-2 px-16 rounded-2xl border border-black cursor-pointer text-black text-xl font-normal w-56 mb-20"
